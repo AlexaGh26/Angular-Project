@@ -1,14 +1,21 @@
 import { NgModule } from '@angular/core';
-import {LayoutComponent} from './layout.component'
-
+import { LayoutComponent} from './layout.component'
+import {MatButtonModule} from '@angular/material/button';
+import {MatMenuModule} from '@angular/material/menu';
+import { RouterModule } from '@angular/router';
+import { MenuModule } from '../menu/menu.module';
+import { HomeModule } from 'src/app/pages/home/home.module';
 
 
 @NgModule({
   declarations: [LayoutComponent],
   exports: [LayoutComponent],
-  imports: [
-       
-    ], 
-  
+    imports: [
+        MatButtonModule,
+        MatMenuModule,
+        RouterModule,
+        MenuModule,
+        HomeModule,
+    ]
 })
 export class LayoutModule { }

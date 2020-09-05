@@ -1,1 +1,46 @@
-<p>registration works!</p>
+<section class="main-container-form">
+  <div class="container-title">
+    <h2>Registration:</h2>
+  <span>Please enter your information</span>
+  </div>
+  <form action="">
+  <p>
+    <mat-form-field appearance="legacy">
+      <mat-label>Legacy form field</mat-label>
+      <input matInput placeholder="Placeholder">
+      <mat-hint>Name</mat-hint>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="standard">
+      <mat-label>Standard form field</mat-label>
+      <input matInput placeholder="Placeholder">
+      <mat-hint>Surname</mat-hint>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="standard">
+      <mat-label>Standard form field</mat-label>
+      <input matInput placeholder="Placeholder">
+      <mat-hint>Age</mat-hint>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="fill">
+    <mat-label>Enter your email</mat-label>
+    <input matInput placeholder="pat@example.com" required>
+    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+  </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="standard">
+      <mat-label>Select</mat-label>
+      <mat-select>
+        <mat-option value="option">uno</mat-option>
+        <mat-option value="option">dos</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </p>
+  <button mat-raised-button color="accent">Send</button>
+</form>
+</section>

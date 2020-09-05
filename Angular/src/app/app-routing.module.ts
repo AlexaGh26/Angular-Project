@@ -3,8 +3,24 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { RegistrationComponent } from './components/registration/registration.component';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { LayoutComponent } from './components/layout/layout.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: '',
+    component: LayoutComponent, // this is the component with the <router-outlet> in the template
+    children: [
+      {
+        path: 'home', // child route path
+        component: HomeComponent, // child route component that the router renders
+      },
+      {
+        path: 'registration',
+        component: RegistrationComponent, // another child route component that the router renders
+      },
+    ],
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
@@ -17,10 +33,4 @@ export class AppRoutingModule {
   ) {}
 
  
-  routes: Routes = [
-    { path: '**', component: HomeComponent },
-    { path: '/home', component: HomeComponent },
-    { path: '/', component: HomeComponent },
-    { path: '/registration', component: RegistrationComponent },
-  ];
 }
