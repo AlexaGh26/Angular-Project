@@ -7,6 +7,7 @@ import {MatSelectModule} from '@angular/material/select';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from "@angular/common";
 import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [RegistrationComponent],
@@ -19,6 +20,7 @@ import {MatButtonModule} from '@angular/material/button';
         BrowserModule,
         CommonModule,
         MatButtonModule,
+        MatCardModule,
     ]
 })
 export class RegistrationModule { }
