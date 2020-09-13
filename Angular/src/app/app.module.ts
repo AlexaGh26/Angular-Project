@@ -8,11 +8,13 @@ import { HomeModule } from './pages/home/home.module';
 import { RegistrationModule } from './components/registration/registration.module';
 import { LayoutModule } from './components/layout/layout.module';
 import { CommonModule } from "@angular/common";
+import { TableModule } from './components/table/table.module';
+import { HistoryModule } from './components/history/history.module';
 
  
 @NgModule({
   declarations: [
-    AppComponent, 
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -22,6 +24,8 @@ import { CommonModule } from "@angular/common";
     RegistrationModule,
     LayoutModule,
     CommonModule,
+    TableModule,
+    HistoryModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

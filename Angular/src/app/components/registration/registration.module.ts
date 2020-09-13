@@ -8,6 +8,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from "@angular/common";
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 @NgModule({
   declarations: [RegistrationComponent],
@@ -21,6 +22,7 @@ import {MatCardModule} from '@angular/material/card';
         CommonModule,
         MatButtonModule,
         MatCardModule,
+        MatDatepickerModule,
     ]
 })
 export class RegistrationModule { }

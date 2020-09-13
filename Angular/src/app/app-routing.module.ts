@@ -4,6 +4,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { RegistrationComponent } from './components/registration/registration.component';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { LayoutComponent } from './components/layout/layout.component';
+import { HistoryComponent } from './components/history/history.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,10 @@ const routes: Routes = [
       {
         path: 'registration',
         component: RegistrationComponent, // another child route component that the router renders
+      },
+      {
+        path: 'history',
+        component: HistoryComponent, // another child route component that the router renders
       },
     ],
   },

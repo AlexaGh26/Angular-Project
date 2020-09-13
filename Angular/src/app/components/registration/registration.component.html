@@ -1,48 +1,60 @@
-<section class="main-container-form">
-  <mat-card>
-  <div class="container-title">
-    <h2>Registration:</h2>
-  <span>Please enter your information</span>
-  </div>
-  <form action="">
-  <p>
-    <mat-form-field appearance="legacy">
-      <mat-label>Legacy form field</mat-label>
-      <input matInput placeholder="Placeholder">
-      <mat-hint>Name</mat-hint>
-    </mat-form-field>
-  </p>
-  <p>
-    <mat-form-field appearance="standard">
-      <mat-label>Standard form field</mat-label>
-      <input matInput placeholder="Placeholder">
-      <mat-hint>Surname</mat-hint>
-    </mat-form-field>
-  </p>
-  <p>
-    <mat-form-field appearance="standard">
-      <mat-label>Standard form field</mat-label>
-      <input matInput placeholder="Placeholder">
-      <mat-hint>Age</mat-hint>
-    </mat-form-field>
-  </p>
-  <p>
-    <mat-form-field appearance="fill">
-    <mat-label>Enter your email</mat-label>
-    <input matInput placeholder="pat@example.com" required>
-    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-  </mat-form-field>
-  </p>
-  <p>
-    <mat-form-field appearance="standard">
-      <mat-label>Select</mat-label>
-      <mat-select>
-        <mat-option value="option">uno</mat-option>
-        <mat-option value="option">dos</mat-option>
-      </mat-select>
-    </mat-form-field>
-  </p>
-  <button mat-raised-button color="accent">Send</button>
+<form id="container-form">
+  <header>
+    <div class="container-title">
+      <h2>Registration:</h2>
+      <span>Please enter your information</span>
+    </div>
+  </header>
+
+  <aside>
+    <p>
+      <mat-form-field appearance="legacy">
+        <mat-label>Legacy form field</mat-label>
+        <input matInput placeholder="Placeholder">
+        <mat-hint>Name</mat-hint>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="standard">
+        <mat-label>Standard form field</mat-label>
+        <input matInput placeholder="Placeholder">
+        <mat-hint>Id</mat-hint>
+      </mat-form-field>
+    </p>
+    <h4>Payment date:</h4>
+    <p>
+      <mat-form-field appearance="fill">
+        <mat-label>Verbose datepicker</mat-label>
+        <input matInput [matDatepicker]="dp">
+        <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
+        <mat-datepicker #dp></mat-datepicker>
+      </mat-form-field>
+    </p>
+  </aside>
+
+  <main>
+    <p>
+      <mat-form-field appearance="standard">
+        <mat-label>Standard form field</mat-label>
+        <input matInput placeholder="Placeholder">
+        <mat-hint>Surname</mat-hint>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="fill">
+        <mat-label>Enter your email</mat-label>
+        <input matInput placeholder="pat@example.com" required>
+        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+    </p>
+    <h4>Requested value:</h4>
+    <p>
+      <input class="form-control-lg" type="number" value="20000" data-decimals="0" min="10000" max="100000" step="10000"/>
+    </p>
+   
+  </main>
+
+  <footer>
+    <button mat-raised-button color="accent">Send</button>
+  </footer>
 </form>
-</mat-card>
-</section>
