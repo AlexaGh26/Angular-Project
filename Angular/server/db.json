@@ -99,6 +99,16 @@
       "clientId": "32213324",
       "approved": true,
       "id": 10
+    },
+    {
+      "name": "Nestor",
+      "surName": "Gutierrez",
+      "email": "nestor@gmail.com",
+      "date": "Wed Sep 30 2020 00:00:00 GMT-0500",
+      "creditAmount": 10000,
+      "clientId": "1096625646",
+      "approved": true,
+      "id": 11
     }
   ]
 }
