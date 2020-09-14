@@ -23,6 +23,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
         MatButtonModule,
         MatCardModule,
         MatDatepickerModule,
+        CommonModule
     ]
 })
 export class ShowValueModule { }

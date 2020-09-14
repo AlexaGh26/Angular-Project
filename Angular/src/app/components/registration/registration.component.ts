@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material/core';
-import {defaultFormat as _rollupMoment} from 'moment';
+import * as moment from 'moment';
 import {MomentDateAdapter, MAT_MOMENT_DATE_ADAPTER_OPTIONS} from '@angular/material-moment-adapter';
+import { environment } from 'src/environments/environment.dev';
+import { CreditService } from 'src/app/services/credit.service';
 
-const moment = _rollupMoment || _rollupMoment;
 
 export const MY_FORMATS = {
   parse: {
@@ -37,7 +38,18 @@ export class RegistrationComponent implements OnInit {
   showModal = false;
   resultCredit : number;
   email = new FormControl('', [Validators.required, Validators.email]);
-  constructor() {}
+  creditForm: FormGroup;
+  constructor(private formBuilder: FormBuilder, private creditService: CreditService
+    ) {
+      this.creditForm = this.formBuilder.group({
+        name: '',
+        surName: '',
+        email: new FormControl('', [Validators.required, Validators.email]),
+        date: '',
+        creditAmount: '',
+        clientId: ''
+      });
+    }
 
 
   ngOnInit(): void {}
@@ -48,6 +60,24 @@ export class RegistrationComponent implements OnInit {
   }
 
   approbalCredit(){
+    const creditAmount = this.creditForm.controls['creditAmount'].value;
+    const date = moment(this.creditForm.controls['date'].value).toLocaleString();
+    const approved = this.randmApproval() ;
+    
+    if(creditAmount <= environment.DEFAULTCREDITVALUE) {
+      const body = {
+        ...this.creditForm.value,
+        date,
+        approved
+      };
+      environment.DEFAULTCREDITVALUE = environment.DEFAULTCREDITVALUE - creditAmount;
+      this.creditService.credit(body);
+    }
+
+   
+  }
+
+  randmApproval(): boolean {
     const result = !!(Math.round(Math.random()))
     if (result) {
       this.showModal = true;

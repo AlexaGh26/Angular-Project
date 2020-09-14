@@ -1,0 +1,104 @@
+{
+  "credits": [
+    {
+      "name": "Alexandra",
+      "surName": "Gomez",
+      "email": "alexa2@gmail.com",
+      "date": "Thu Sep 17 2020 00:00:00 GMT-0500",
+      "creditAmount": 30000,
+      "clientId": "15161",
+      "approved": true,
+      "id": 1
+    },
+    {
+      "name": "Alexandra",
+      "surName": "Gomez",
+      "email": "alexa2@gmail.com",
+      "date": "Thu Sep 17 2020 00:00:00 GMT-0500",
+      "creditAmount": 30000,
+      "clientId": "15161",
+      "approved": false,
+      "id": 2
+    },
+    {
+      "name": "Alexandra",
+      "surName": "Gomez",
+      "email": "alexa2@gmail.com",
+      "date": "Thu Sep 17 2020 00:00:00 GMT-0500",
+      "creditAmount": 30000,
+      "clientId": "15161",
+      "approved": true,
+      "id": 3
+    },
+    {
+      "name": "Alexandra",
+      "surName": "Gomez",
+      "email": "alexa2@gmail.com",
+      "date": "Thu Sep 24 2020 00:00:00 GMT-0500",
+      "creditAmount": 50000,
+      "clientId": "15161",
+      "approved": true,
+      "id": 4
+    },
+    {
+      "name": "Alex",
+      "surName": "Gom",
+      "email": "alexa2@gmail.com",
+      "date": "Sat Sep 26 2020 00:00:00 GMT-0500",
+      "creditAmount": 50000,
+      "clientId": "21334",
+      "approved": false,
+      "id": 5
+    },
+    {
+      "name": "Alexandra",
+      "surName": "Gomez",
+      "email": "alexa2@gmail.com",
+      "date": "Tue Sep 15 2020 00:00:00 GMT-0500",
+      "creditAmount": 30000,
+      "clientId": "15161",
+      "approved": false,
+      "id": 6
+    },
+    {
+      "name": "alewxa",
+      "surName": "loooo",
+      "email": "ggg@gmil.com",
+      "date": "Thu Sep 24 2020 00:00:00 GMT-0500",
+      "creditAmount": 10000,
+      "clientId": "32213324",
+      "approved": false,
+      "id": 7
+    },
+    {
+      "name": "alewxa",
+      "surName": "loooo",
+      "email": "ggg@gmil.com",
+      "date": "Thu Sep 24 2020 00:00:00 GMT-0500",
+      "creditAmount": 10000,
+      "clientId": "32213324",
+      "approved": false,
+      "id": 8
+    },
+    {
+      "name": "alewxa",
+      "surName": "loooo",
+      "email": "ggg@gmil.com",
+      "date": "Thu Sep 24 2020 00:00:00 GMT-0500",
+      "creditAmount": 10000,
+      "clientId": "32213324",
+      "approved": false,
+      "id": 9
+    },
+    {
+      "name": "alewxa",
+      "surName": "loooo",
+      "email": "ggg@gmil.com",
+      "date": "Thu Sep 24 2020 00:00:00 GMT-0500",
+      "creditAmount": 10000,
+      "clientId": "32213324",
+      "approved": true,
+      "id": 10
+    }
+  ]
+}

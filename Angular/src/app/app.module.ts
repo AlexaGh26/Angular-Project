@@ -12,6 +12,8 @@ import { TableModule } from './components/table/table.module';
 import { HistoryModule } from './components/history/history.module';
 import { ShowValueModule } from './components/show-value/show-value.module';
 import { ModalResultCreditModalModule } from './components/modal-result-credit/modal-result-credit.module';
+import {CreditService} from './services/credit.service';
+import { HttpClientModule } from '@angular/common/http';
 
  
 @NgModule({
@@ -30,9 +32,9 @@ import { ModalResultCreditModalModule } from './components/modal-result-credit/m
     HistoryModule,
     ShowValueModule,
     ModalResultCreditModalModule,
-
+    HttpClientModule
   ],
-  providers: [],
+  providers: [CreditService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

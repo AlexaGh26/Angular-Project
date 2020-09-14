@@ -1,5 +1,5 @@
-<mat-tab-group dynamicHeight>
-    <mat-tab label="Credits Approved" >
+<mat-tab-group dynamicHeight >
+    <mat-tab label="Credits Approved"  isActive="check($event)">
       <div class="example-small-box mat-elevation-z4">
        <app-table 
        [dataSource]="dataSource"
@@ -9,7 +9,7 @@
     <mat-tab label="Rejected Credits">
       <div class="example-large-box mat-elevation-z4">
         <app-table 
-        [dataSource]="dataSource"
+        [dataSource]="dataSourceRejected"
         [displayedColumns]="displayedColumns"></app-table>
        </div>
     </mat-tab>
