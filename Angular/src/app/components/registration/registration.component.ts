@@ -34,18 +34,30 @@ export const MY_FORMATS = {
 export class RegistrationComponent implements OnInit {
 
   date = new FormControl();
-
+  showModal = false;
+  resultCredit : number;
   email = new FormControl('', [Validators.required, Validators.email]);
-  constructor() { }
+  constructor() {}
+
 
   ngOnInit(): void {}
 
   getErrorMessage() {
-    if (this.email.hasError('required')) {
-      return '';
-    }
-
+    this.email.hasError('required') ? '' : '';
     return this.email.hasError('email') ? 'Not a valid email' : '';
   }
 
+  approbalCredit(){
+    const result = !!(Math.round(Math.random()))
+    if (result) {
+      this.showModal = true;
+      this.resultCredit = 1;
+    } else {
+      this.showModal = true;
+      this.resultCredit = 0;
+    }
+    return (result)
+  }
+  
+  
 }

@@ -7,6 +7,8 @@ import { environment} from '../../../environments/environment.dev';
   styleUrls: ['./show-value.component.scss']
 })
 export class ShowValueComponent implements OnInit {
+
+  //assigns a variable the standard value of the credit and formats it 
   defaultcreditvalue = new Intl.NumberFormat().format(environment.DEFAULTCREDITVALUE);
 
   constructor() { }

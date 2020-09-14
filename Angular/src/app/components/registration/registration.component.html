@@ -49,12 +49,22 @@
     </p>
     <h4>Requested value:</h4>
     <p>
-      <input class="form-control-lg" type="number" value="20000" data-decimals="0" min="10000" max="100000" step="10000"/>
+      <input class="form-control-lg" type="number" value="20000" data-decimals="0" min="10000" max="100000"
+        step="10000" />
     </p>
-   
+
   </main>
 
   <footer>
-    <button mat-raised-button color="accent" (click) ="">Send</button>
+      <button mat-raised-button color="accent" (click)="approbalCredit()" >Send</button>
+      <div *ngIf="showModal">
+        <h1 mat-dialog-title>your credit score</h1>
+        <div mat-dialog-content>This dialog showcases the title, close, content and actions elements.</div>
+        <div mat-dialog-actions>
+          <button mat-button mat-dialog-close>Close</button>
+      </div>
+
+    </div>
+
   </footer>
 </form>

@@ -9,6 +9,7 @@ import { CommonModule } from "@angular/common";
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import {ModalResultCreditModalModule} from '../modal-result-credit/modal-result-credit.module';
 
 @NgModule({
   declarations: [RegistrationComponent],
@@ -23,6 +24,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
         MatButtonModule,
         MatCardModule,
         MatDatepickerModule,
+        ModalResultCreditModalModule,
     ]
 })
 export class RegistrationModule { }

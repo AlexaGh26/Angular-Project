@@ -11,6 +11,7 @@ import { CommonModule } from "@angular/common";
 import { TableModule } from './components/table/table.module';
 import { HistoryModule } from './components/history/history.module';
 import { ShowValueModule } from './components/show-value/show-value.module';
+import { ModalResultCreditModalModule } from './components/modal-result-credit/modal-result-credit.module';
 
  
 @NgModule({
@@ -28,6 +29,8 @@ import { ShowValueModule } from './components/show-value/show-value.module';
     TableModule,
     HistoryModule,
     ShowValueModule,
+    ModalResultCreditModalModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
