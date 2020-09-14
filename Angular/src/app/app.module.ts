@@ -10,6 +10,7 @@ import { LayoutModule } from './components/layout/layout.module';
 import { CommonModule } from "@angular/common";
 import { TableModule } from './components/table/table.module';
 import { HistoryModule } from './components/history/history.module';
+import { ShowValueModule } from './components/show-value/show-value.module';
 
  
 @NgModule({
@@ -26,6 +27,7 @@ import { HistoryModule } from './components/history/history.module';
     CommonModule,
     TableModule,
     HistoryModule,
+    ShowValueModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

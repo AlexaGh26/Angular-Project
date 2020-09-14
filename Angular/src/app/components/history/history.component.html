@@ -1,13 +1,17 @@
 <mat-tab-group dynamicHeight>
-    <mat-tab label="Credits Approved">
+    <mat-tab label="Credits Approved" >
       <div class="example-small-box mat-elevation-z4">
-       <app-table></app-table>
+       <app-table 
+       [dataSource]="dataSource"
+       [displayedColumns]="displayedColumns"></app-table>
       </div>
     </mat-tab>
-    <mat-tab label="Rejected credits">
+    <mat-tab label="Rejected Credits">
       <div class="example-large-box mat-elevation-z4">
-        Large content
-      </div>
+        <app-table 
+        [dataSource]="dataSource"
+        [displayedColumns]="displayedColumns"></app-table>
+       </div>
     </mat-tab>
   </mat-tab-group>
 
