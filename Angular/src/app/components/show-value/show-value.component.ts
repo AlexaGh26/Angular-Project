@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { environment} from '../../../environments/environment.dev';
 
 @Component({
   selector: 'app-show-value',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./show-value.component.scss']
 })
 export class ShowValueComponent implements OnInit {
+  defaultcreditvalue = new Intl.NumberFormat().format(environment.DEFAULTCREDITVALUE);
 
   constructor() { }
 
